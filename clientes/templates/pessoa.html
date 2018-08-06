@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %} Clientes {% endblock %}
+{% block main %}
+    {% if idade > 0%}
+        <h1> Olá pessoa com {{ idade }} anos</h1>
+    {% else %}
+        <h1> Pessoa não encontrada</h1>
+    {% endif %}
+{% endblock %}

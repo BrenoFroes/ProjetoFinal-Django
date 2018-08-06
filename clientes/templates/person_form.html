@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+{% block title %} Clientes {% endblock %}
+{% block main %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|bootstrap }}
+        <button type="submit" class="btn btn-primary"> SALVAR </button>
+    </form>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %} Clientes {% endblock %}
+{% block main %}
+    <h1>Tem certeza que deseja deletar {{ person.first_name }}?</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary"> Deletar </button>
+    </form>
+{% endblock %}

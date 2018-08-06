@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Seja bem-vindo! {% endblock %}
+{% block main %}
+
+<div class="row">
+    <div class="col-5"></div>
+    <div class="col-7" >
+         <h1>Bem-vindo!</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5"></div>
+    <div class="col-7">
+        {% if user.is_authenticated %}
+            <p> Olá, {{ user.username }}! </p>
+            <a href="{% url 'logout' %}"> Sair</a>
+        {% else %}
+            <p><a href="{% url 'login' %}"> Entrar</a></p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+{% block footer %}
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">App de clientes - DJANGO 2.0</span>
+      </div>
+    </footer>
+
+{% endblock %}
